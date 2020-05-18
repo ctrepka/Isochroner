@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Convenient Travel Time Analysis Tool</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" />
+	<link rel="stylesheet" href="/leaflet-search/leaflet-search.css" />
+	<link rel="stylesheet" href="/style.css" />
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous">
+
+	</script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous">
+
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js">
+
+	</script>
+
+
+
+	<script src="/leaflet-search/leaflet-search.js">
+
+	</script>
+
+
+</head>
+
+
+<body>
+
+	<div style="height: 100vh">
+		<div class="navbar">
+			<ul class='navLinks'>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				
+			</ul>
+		</div>
+
+
+		<div class="poiContainer" id="73" data-value="73">
+			<div class="poiText" id="73">
+				<span>I would like to reach</span> 
+            <div id="search-container"> </div> 
+            
+            <span>within</span>
+            <input id="poiTime" type="text" class="form-control poiTime" placeholder="15"><span>minutes, </span>
+            
+            <span>travelling by</span>
+            <select class="form-control poiTravel" id="poiTravel">
+              <option value="driving">car</option>
+              <option value="public_transport">public transporation</option>
+              <option value="cycling">bike</option>
+              <option value="walking">foot</option>
+            </select> 
+            
+            <span>and arriving by</span>
+            
+            <input class="form-control poiArriveBy" type="text" id="poiArriveBy" placeholder="Please select Date Time" data-input>
+
+            <button type="button" class="btn btn-primary" onclick="addPOI()">+ Add POI</button>
+
+            </div>
+          </div>
+        
+        <div id="poiList" ></div>
+    
+			<div id="map"></div>
+		</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+  <script src="Poi.js"></script>  
+  <script src="TravelTime.js"></script>  
+  <script src="map.js"></script>  
+  <script src="mapController.js"></script>
+  
+  <script>
+    $("#poiArriveBy").flatpickr({
+      enableTime: true,
+      dateFormat: "Z"
+    });
+  </script>
+
+</script>
+</body>
+</html>

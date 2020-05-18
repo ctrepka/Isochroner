@@ -1,0 +1,80 @@
+@media only screen and (max-width: 499px) {
+
+  .poiContainer {
+    width: 100vw;
+    position: absolute;
+    z-index: 999;
+    background: #343434;
+    color: #c4c4c4;
+    padding: 8px 8px 32px 8px;
+    BOX-SHADOW: 0px 2px 8px 0px #252020b8;
+    border-radius: 8px 8px 0px 0px;
+    bottom: 0px;
+  }
+
+  .poiContainer button{
+    float: right;
+    margin: 8px;
+  }
+
+  #map {
+    height: 70vh; 
+    width: 100%;
+    position: initial ;
+  }
+  
+  .leaflet-bottom {
+    z-index: -999;
+  }
+}
+
+
+@media only screen and (min-width: 500px) {
+
+  .poiContainer {
+    position: absolute;
+    z-index: 999;
+    background: #343434;
+    color: #c4c4c4;
+    padding: 8px;
+    BOX-SHADOW: 0px 2px 8px 0px #252020b8;
+    border-radius: 8px;
+    margin: 16px;
+    max-width: 500px;
+    min-width: 200px;
+    width: 30vw;
+    
+  }
+
+  .poiContainer button{
+    float: right;
+    margin: 8px;
+  }
+
+  #map {
+    height: 100%; 
+    width: 100%;
+    position: initial ;
+  }
+}
+
+
+.poiContainer input {
+    max-width: 100%;
+}
+
+.navbar {
+  background: #343434;
+}
+ul.navLinks {
+  display: inline-flex;
+  margin: 0px;
+}
+.navLinks li {
+  margin: 0px 8px;
+  list-style: none;
+}
+.navLinks a {
+  color: ghostwhite;
+  font-weight: 100;
+}
